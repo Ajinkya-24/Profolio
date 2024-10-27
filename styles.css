@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light background */
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #ffcc00; /* Bright header */
+    padding: 20px;
+    animation: fadeIn 1s ease; /* Fade in animation */
+}
+
+h1 {
+    color: #0056b3; /* Dark blue for the name */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0056b3;
+    transition: color 0.3s; /* Transition for link color */
+}
+
+nav ul li a:hover {
+    color: #ff5722; /* Change color on hover */
+}
+
+#about {
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 1s ease; /* Slide in animation */
+}
+
+#projects {
+    padding: 20px;
+    background-color: #e0f7fa; /* Light cyan background */
+    animation: fadeIn 1s ease; /* Fade in animation */
+}
+
+.project {
+    margin-bottom: 20px;
+    border: 2px solid #0056b3; /* Blue border */
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly lower */
+    animation: fadeInUp 0.5s forwards; /* Fade in up animation */
+}
+
+.project:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for the first project */
+}
+
+.project:nth-child(2) {
+    animation-delay: 0.4s; /* Delay for the second project */
+}
+
+/* Animation for contact form */
+#contact {
+    padding: 20px;
+    background-color: #ffe0b2; /* Light orange background */
+    animation: fadeIn 1s ease; /* Fade in animation */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffcc00; /* Bright footer */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular profile photo */
+    object-fit: cover; /* Cover the area */
+    margin: 20px auto;
+    display: block;
+    transition: transform 0.3s; /* Transition for profile photo */
+}
+
+.profile-photo:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Button styling */
+button {
+    background-color: #0056b3; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition for button */
+}
+
+button:hover {
+    background-color: #ff5722; /* Change color on hover */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project {
+    margin-bottom: 20px;
+    border: 2px solid #0056b3; /* Blue border */
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.95); /* Start slightly smaller */
+    animation: fadeInUp 0.5s forwards; /* Fade in up animation */
+}
+
+.project:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for the first project */
+}
+
+.project:nth-child(2) {
+    animation-delay: 0.4s; /* Delay for the second project */
+}
+
+.project.show {
+    animation: fadeInUp 0.5s forwards, zoomIn 0.5s forwards; /* Fade in up and zoom in animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:hover {
+    background-color: #ff5722; /* Change color on hover */
+    animation: pulse 0.6s infinite; /* Add pulse animation */
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#about {
+    padding: 20px;
+    text-align: center;
+    animation: fadeInLeft 1s ease; /* Fade in left animation */
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    opacity: 0; /* Start hidden */
+    animation: slideInRight 0.5s forwards; /* Slide in right animation */
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for the first item */
+}
+nav ul li:nth-child(2) {
+    animation-delay: 0.4s; /* Delay for the second item */
+}
+nav ul li:nth-child(3) {
+    animation-delay: 0.6s; /* Delay for the third item */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffcc00; /* Bright footer */
+    animation: bounce 1s; /* Bounce animation */
+}
